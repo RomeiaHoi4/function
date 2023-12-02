@@ -9,18 +9,7 @@ if not os.path.exists(folder_path):
 image = Image.open("{}.png".format(png_name))
 class allblock:
     blocks = [
-        [127,178,56,"slime"],
-        [247,233,163,"sand"],
-        [255,0,0,"redstone_block"],
-        [160,160,255,"ice"],
-        [167,167,167,"iron_block"],
-        [0,124,0,"leaves"],
         [255,255,255,"white_wool"],
-        [164,168,184,"clay"],
-        [151,109,77,"dirt"],
-        [112,112,112,"stone"],
-        [143, 119, 72,"planks"],
-        [255, 252, 245,"quartz_block"],
         [216, 127, 51,"orange_wool"],
         [178, 76, 216,"magenta_wool"],
         [102, 153, 216,"light_blue_wool"],
@@ -35,29 +24,7 @@ class allblock:
         [102, 76, 51,"brown_wool"],
         [102, 127, 51,"green_wool"],
         [153, 51, 51,"red_wool"],
-        [25, 25, 25,"black_wool"],
-        [250, 238, 77,"gold_block"],
-        [92, 219, 213,"diamond_block"],
-        [74, 128, 255,"lapis_block"],
-        [0, 217, 58,"emerald_block"],
-        [112, 2, 0,"red_nether_brick"],
-        [209, 177, 161,"white_terracotta"],
-        [159, 82, 36,"orange_terracotta"],
-        [149, 87, 108,"magenta_terracotta"],
-        [112, 108, 138,"light_blue_terracotta"],
-        [186, 133, 36,"yellow_terracotta"],
-        [103, 117, 53,"lime_terracotta"],
-        [160, 77, 78,"pink_terracotta"],
-        [57, 41, 35,"gray_terracotta"],
-        [135, 107, 98,"light_gray_terracotta"],
-        [87, 92, 92,"cyan_terracotta"],
-        [122, 73, 88,"purple_terracotta"],
-        [76, 62, 92,"blue_terracotta"],
-        [76, 50, 35,"brown_terracotta"],
-        [76, 82, 42,"green_terracotta"],
-        [142, 60, 46,"red_terracotta"],
-        [37, 22, 16,"black_terracotta"],
-        [100, 100, 100,"deepslate"]
+        [25, 25, 25,"black_wool"]
     ]
 
 
@@ -67,7 +34,7 @@ def printblock(image_array,x,y):
         for j in range(len(image_array[0])):
             min_sum = 65535
             min_index = 0
-            for k in range(48):
+            for k in range(15):
                 sum = 0
                 sum = sum + np.power(np.abs(image_array[i][j][0] - allblock.blocks[k][0]),2)
                 sum = sum + np.power(np.abs(image_array[i][j][1] - allblock.blocks[k][1]),2)
