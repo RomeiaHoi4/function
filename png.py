@@ -113,7 +113,7 @@ with open("print.mcfunction".format(png_name),"w") as file:
     file.write("scoreboard players set @p[tag=!printing] print 0\n") 
     file.write("tag @p[tag=!printing] add printing\n") 
     for y in range(1+int(image.height/64)):
-        k = k + 4
+        k = k + 2
         for x in range(1+int(image.width/64)):
             k = k + 1
             file.write("execute @p[scores={{print={3}}},tag=printing] ~~~ function {0}/x{1}y{2}\n".format(png_name,x,y,k)) 
